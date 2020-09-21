@@ -15,7 +15,11 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class FamiliarDetailComponent implements OnInit {
 
   famClass: string[];
-  detailFamiliar: Familiar;
+  detailFamiliar: Familiar = {
+    id: 0,
+    name:'',
+    class:''
+  };
   familiarId: string;
   constructor(private route: ActivatedRoute,private router:Router,private _ffs:FamiliarsServiceService) {
   }
@@ -44,11 +48,7 @@ export class FamiliarDetailComponent implements OnInit {
 
     });
 
-    if (this.detailFamiliar) {
-      this.router.navigate(['familiars']);
-    } else {
 
-    }
 
   }
 
@@ -66,7 +66,7 @@ export class FamiliarDetailComponent implements OnInit {
   updateFamiliar()
   {
     this._ffs.postFamiliar(this.detailFamiliar);
-
+    this.backToList();
   }
 
 }

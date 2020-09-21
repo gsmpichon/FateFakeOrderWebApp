@@ -13,8 +13,8 @@ import {FamiliarsModule} from './familiars/familiars.module';
 import { FamiliarsServiceService } from './familiars/familiars-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MastersModule} from './masters/masters.module';
-
-
+import {MasterService} from './masters/master.service';
+import {AddServantComponent} from './masters/add-servant/add-servant.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import {MastersModule} from './masters/masters.module';
     BrowserAnimationsModule,
     MastersModule
   ],
-  providers: [FamiliarsServiceService],
+  providers: [FamiliarsServiceService,MasterService],
+  entryComponents:[AddServantComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

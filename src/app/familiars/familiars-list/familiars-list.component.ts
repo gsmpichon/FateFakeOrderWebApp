@@ -15,8 +15,7 @@ import {MatPaginator} from '@angular/material/paginator';
 })
 export class FamiliarsListComponent implements OnInit {
 
-  articles:any[];
-  olRayt:string[];
+
   familiars: MatTableDataSource<Familiar>;
   familiar:Familiar;
   columnsToDisplay = ['id', 'name','class','edit'];

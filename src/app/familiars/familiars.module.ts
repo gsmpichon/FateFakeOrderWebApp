@@ -9,6 +9,8 @@ import { MatSelectModule} from '@angular/material/select';
 import { AppRoutingModule } from '.././app-routing.module';
 import { NewFamiliarComponent } from './new-familiar/new-familiar.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [FamiliarsListComponent, FamiliarDetailComponent, NewFamiliarComponent],
@@ -19,10 +21,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatInputModule,
     MatSelectModule,
     AppRoutingModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   exports:[
-    FamiliarsListComponent
+    FamiliarsListComponent,
+    FamiliarDetailComponent
   ]
 })
 export class FamiliarsModule {

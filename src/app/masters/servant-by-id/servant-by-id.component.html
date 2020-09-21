@@ -1,0 +1,32 @@
+<form #familiarForm ="ngForm">
+  <p>
+  <mat-form-field class ="full-width">
+    <mat-label>Servant ID</mat-label>
+    <input type="text" disabled matInput name="ServantID" [value] = "detailedServant.id"/>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field class ="full-width">
+    <mat-label>Familiar ID</mat-label>
+    <input type="text" disabled matInput  name="FamiliarID" [value] = "detailedServant.familiarId"/>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field class ="full-width">
+    <mat-label>Master ID</mat-label>
+    <input type="text" disabled matInput  name="MasterID" [value] = "detailedServant.masterId"/>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field class ="full-width">
+    <mat-label>Familiar Name</mat-label>
+    <input type="text" disabled matInput  name="FamiliarName" [value] = "detailedServant.familiar.name"/>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field class ="full-width">
+    <mat-label>Familiar Class</mat-label>
+    <input type="text" disabled matInput  name="FamiliarClass" [value] = "detailedServant.familiar.class"/>
+  </mat-form-field>
+</p>
+</form>

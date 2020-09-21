@@ -17,7 +17,7 @@
 </div> -->
 
     <form class= "familiar-form" #familiarForm="ngForm" (submit)="onSubmit(familiarForm)">
-      <input type="hidden" name="FamiliarId" [value] ="detailFamiliar.id">
+      <input type="hidden" name="FamiliarId" >
       <mat-form-field class ="full-width">
         <mat-label>Familiar Name</mat-label>
         <input matInput name ="FamiliarName" #FamiliarName = "ngModel" [(ngModel)] ="detailFamiliar.name" placeholder="Familiar Name" required/>
@@ -31,9 +31,9 @@
           </mat-option>
         </mat-select>
         </mat-form-field>
-      <button mat-flat-button type="submit">Update</button>
+      <button mat-raised-button color="primary" type="submit">Update</button>
     </form>
 
+<mat-divider></mat-divider>
 
-
-<button (click) = "backToList()">Back to List</button>
+<button mat-raised-button color="primary" (click) = "backToList()">Back to List</button>

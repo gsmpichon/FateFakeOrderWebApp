@@ -23,7 +23,7 @@
   <div>
 <mat-form-field>
   <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Search Familiar Name" #input>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search Familiar Name" class="full-width" #input>
 </mat-form-field>
 <button routerLink="/newfamiliar" mat-flat-button color="primary">Add New</button>
 </div>
@@ -45,7 +45,7 @@
   <ng-container matColumnDef="edit">
     <th mat-header-cell *matHeaderCellDef> </th>
     <td mat-cell *matCellDef="let familiar">
-      <button [routerLink]="['/familiars',familiar.id]" mat-flat-button color="primary">Edit</button>
+      <button mat-button [routerLink]="['/familiars',familiar.id]" mat-raised-button color="primary">Edit</button>
     </td>
   </ng-container>
 
