@@ -1,0 +1,16 @@
+<form class= "familiar-form" #familiarForm="ngForm" (submit)="onSubmit(familiarForm)">
+  <mat-form-field class ="full-width">
+    <mat-label>Familiar Name</mat-label>
+    <input matInput name ="FamiliarName" #FamiliarName = "ngModel" [(ngModel)] ="newFamiliar.name" placeholder="Familiar Name" required/>
+  </mat-form-field>
+
+  <mat-form-field class ="full-width">
+    <mat-label >Familiar Class</mat-label>
+    <mat-select class="label" ng-model ="newFamiliar.class" #FamiliarClass = "ngModel" [(ngModel)]="newFamiliar.class" name="FamiliarClass">
+      <mat-option *ngFor="let class of famClass" [value]="class">
+        {{class}}
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+  <button mat-flat-button type="submit">Add New</button>
+</form>

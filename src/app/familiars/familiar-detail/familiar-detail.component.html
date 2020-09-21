@@ -1,0 +1,39 @@
+<!-- <div class="jumbotron">
+    <div class = "container">
+      <form #myForm="ngForm">
+
+        <div class="form-group">
+          <div class= "input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="fas fa-user-circle" [class.green-icon] ="FamiliarName.valid" [class.red-icon] ="FamiliarName.invalid && FamiliarName.touched"></i>
+            </div>
+          <input name ="FamiliarName" class="form-control" #FamiliarName = "ngModel" [(ngModel)] ="detailFamiliar.name" placeholder="Familiar Name" required/>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+</div> -->
+
+    <form class= "familiar-form" #familiarForm="ngForm" (submit)="onSubmit(familiarForm)">
+      <input type="hidden" name="FamiliarId" [value] ="detailFamiliar.id">
+      <mat-form-field class ="full-width">
+        <mat-label>Familiar Name</mat-label>
+        <input matInput name ="FamiliarName" #FamiliarName = "ngModel" [(ngModel)] ="detailFamiliar.name" placeholder="Familiar Name" required/>
+      </mat-form-field>
+
+      <mat-form-field class ="full-width">
+        <mat-label >Familiar Class</mat-label>
+        <mat-select class="label" ng-model ="detailFamiliar.class" #FamiliarClass = "ngModel" [(ngModel)]="detailFamiliar.class" name="FamiliarClass">
+          <mat-option *ngFor="let class of famClass" [value]="class">
+            {{class}}
+          </mat-option>
+        </mat-select>
+        </mat-form-field>
+      <button mat-flat-button type="submit">Update</button>
+    </form>
+
+
+
+<button (click) = "backToList()">Back to List</button>
